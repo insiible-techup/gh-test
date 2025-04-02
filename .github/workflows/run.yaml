@@ -6,8 +6,11 @@ on:
       branch:
         description: "Branch to run the workflow"
         required: true
-        default: "dev"
-
+        type: choice
+        options:
+          - main
+          - dev
+          
 jobs:
   run-workflow:
     runs-on: ubuntu-latest
